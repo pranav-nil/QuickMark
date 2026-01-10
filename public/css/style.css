@@ -1,0 +1,204 @@
+/* Modern card-based design for Digital Library (Option B) */
+
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --danger: #ef4444;
+  --shadow: 0 6px 18px rgba(20, 20, 40, 0.08);
+  --radius: 10px;
+  --container: 1000px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  height: 100%
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 40px;
+}
+
+/* Container */
+.container {
+  max-width: var(--container);
+  margin: 28px auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+  background: transparent;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.logo {
+  margin: 0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+nav .nav-link {
+  margin-left: 18px;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 6px
+}
+
+nav .nav-link.active {
+  color: var(--accent);
+  background: rgba(37, 99, 235, 0.08)
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 18px 0
+}
+
+.toolbar input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: white;
+  max-width: 620px
+}
+
+.btn {
+  background: var(--accent);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow)
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid rgba(37, 99, 235, 0.12)
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 12px
+}
+
+/* Card */
+.card {
+  background: var(--card);
+  padding: 14px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(15, 23, 42, 0.03)
+}
+
+.book-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%
+}
+
+.book-card h3 {
+  margin: 0 0 6px 0;
+  font-size: 16px
+}
+
+.book-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px
+}
+
+.book-card .actions {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center
+}
+
+.book-card .open-btn {
+  display: inline-block;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--accent);
+  text-decoration: none
+}
+
+.book-card .meta {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 8px
+}
+
+/* Form */
+form.card label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+
+  color: #111827'
+  }
+ form.card input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    margin-top: 6px
+  }
+
+  .form-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 8px
+  }
+
+  /* Message */
+  .message {
+    margin-top: 12px;
+    color: var(--muted)
+  }
+
+  /* Small screens */
+  @media (max-width:520px) {
+    .site-header .container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px
+    }
+
+    .toolbar {
+      flex-direction: column;
+      align-items: stretch
+    }
+  }

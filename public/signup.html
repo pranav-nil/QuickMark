@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign Up — Digital Library</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">📚 Digital Library</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Create an Account</h2>
+      <form id="signupForm">
+        <label>Username
+          <input type="text" name="username" required maxlength="255" />
+        </label>
+        <label>Password
+          <input type="password" name="password" required maxlength="255" />
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn">Sign Up</button>
+        </div>
+        <div id="formMessage" class="message" aria-live="polite"></div>
+      </form>
+      <p class="message">
+        Already have an account? <a href="login.html">Login here</a>.
+      </p>
+    </section>
+  </main>
+
+  <script src="/js/auth.js"></script>
+</body>
+</html>

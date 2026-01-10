@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Add Book — Digital Library</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">📚 Digital Library</h1>
+      <nav>
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="add.html" class="nav-link active">Add Book</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Add a new book</h2>
+    <form id="addBookForm" class="card">
+      <label>Book Title <input id="title" name="title" required maxlength="255"/></label>
+      <label>Author <input id="author" name="author" required maxlength="255"/></label>
+      <label>Link or Path to Book <input id="link" name="link" required maxlength="1000" placeholder="https:// or /path/to/file.pdf" /></label>
+      <div class="form-actions">
+        <button type="submit" class="btn">Add Book</button>
+        <a href="/home.html" class="btn btn-ghost">Cancel</a>
+      </div>
+      <div id="formMessage" class="message" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

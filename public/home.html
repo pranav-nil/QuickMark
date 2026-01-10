@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Digital Library — Home</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">📚 Digital Library</h1>
+      <nav>
+        <a href="home.html" class="nav-link active">Home</a>
+        <a href="add.html" class="nav-link">Add Book</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar">
+      <input id="search" placeholder="Search by title or author..." aria-label="Search books">
+      <button id="refreshBtn" class="btn">Refresh</button>
+    </section>
+
+    <section id="booksGrid" class="grid">
+      <!-- Book cards will be injected here -->
+    </section>
+
+    <div id="message" class="message" role="status" aria-live="polite"></div>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
